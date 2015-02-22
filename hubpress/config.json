@@ -1,10 +1,1 @@
-{
-  "meta": {
-    "username": "simevidas",
-    "repositoryName": "simevidas.github.io",
-    "branch": "master"
-  },
-  "theme": {
-    "name": "Casper"
-  }
-}
+{"meta":{"username":"simevidas","repositoryName":"simevidas.github.io","branch":"master","cname":"www.simevidas.com"},"site":{"url":"http://www.simevidas.com"},"socialnetwork":{},"theme":{"name":"Casper","url":"http://simevidas.github.io/themes/Casper"}}
