@@ -1,0 +1,51 @@
+= Blowing up pixel art on the Web
+
+:hp-tags: CSS
+
+If we take an image representing pixel art, for instance, this 16 by 32 Mario GIF:
+
+image::pixelart.gif[Mario]
+
+and blow it up (e.g. by setting `width: 160px` on the image in CSS), browsers will by default **not** preserve its pixels:
+
+image::pixelart.gif[Mario, 160]
+
+In order to preserve pixels, we need to set these **5 CSS properties** on the image:
+
+[source,css]
+----
+.u-preserve-pixels {
+  
+  /* IE */
+  -ms-interpolation-mode: nearest-neighbor;
+  
+  /* Firefox */
+  image-rendering: -moz-crisp-edges;
+  
+  /* Opera Presto (12.x) */
+  image-rendering: -o-crisp-edges;
+  
+  /* Safari */
+  image-rendering: -webkit-optimize-contrast;
+  
+  /* Chrome */
+  image-rendering: pixelated;
+  
+}
+----
+
+The result:
+
+image::pixelart.gif[Mario with preserved pixels,160]
+
+++++++++++++++
+<style>
+[alt="Mario with preserved pixels"] { 
+  -ms-interpolation-mode: nearest-neighbor;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: pixelated;
+}
+</style>
+++++++++++++++
