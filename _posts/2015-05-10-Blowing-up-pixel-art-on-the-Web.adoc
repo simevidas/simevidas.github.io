@@ -28,7 +28,7 @@ In order to preserve pixels, we need to set these **5 CSS properties** on the im
   /* Safari */
   image-rendering: -webkit-optimize-contrast;
   
-  /* Chrome */
+  /* Chrome/Opera */
   image-rendering: pixelated;
   
 }
