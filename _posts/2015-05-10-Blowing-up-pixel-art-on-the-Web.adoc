@@ -2,7 +2,7 @@
 
 :hp-tags: CSS
 
-If we take an image representing pixel art, for instance, this 16×32 pixel Mario GIF:
+If we take an image representing pixel art, for instance this 16×32 pixel Mario GIF:
 
 image::pixelart.gif[Mario]
 
