@@ -2,7 +2,9 @@
 
 :hp-tags: CSS
 
-If we take an image representing pixel art, for instance, this 16 by 32 Mario GIF:
+
+
+If we take an image representing pixel art, for instance, this 16×32 pixel Mario GIF:
 
 image::pixelart.gif[Mario]
 
@@ -10,25 +12,22 @@ and blow it up (e.g. by setting `width: 160px` on the image in CSS), browsers wi
 
 image::pixelart.gif[Mario, 160]
 
-In order to preserve pixels (in a cross-browser fashion), we need to set these **5 CSS properties** on the image:
+In order to preserve pixels (in a cross-browser fashion), we need to set these **four CSS styles** on the image:
 
 [source,css]
 ----
 .u-preserve-pixels {
   
-  /* IE */
+  /* IE and Edge */
   -ms-interpolation-mode: nearest-neighbor;
   
   /* Firefox */
   image-rendering: -moz-crisp-edges;
   
-  /* Opera Presto (12.x) */
-  image-rendering: -o-crisp-edges;
-  
   /* Safari */
   image-rendering: -webkit-optimize-contrast;
   
-  /* Chrome/Opera */
+  /* Chrome and Opera */
   image-rendering: pixelated;
   
 }
