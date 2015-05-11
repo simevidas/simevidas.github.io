@@ -53,4 +53,4 @@ Have you noticed that each browser engine uses a completely different keyword va
 
 === What about Edge?
 
-As you may have heard, Microsoft’s Edge browser/engine has started removing legacy `-ms-` prefixes and it looks like `-ms-interpolation-mode: nearest-neighbor` has stopped working. I’ve tested with the unprefixed and standardized versions, and those don’t work either. I will update this post, once I find out if Microsoft plans to provide this functionality in Edge.
+As you may have heard, Microsoft’s Edge browser/engine has started removing legacy `-ms-` prefixes and it looks like `-ms-interpolation-mode: nearest-neighbor` has stopped working. I have suggested `image-rendering: pixelated` for Edge on Microsoft’s feedback forum (UserVoice). link:https://wpdev.uservoice.com/forums/257854-microsoft-edge-developer/suggestions/7902426-image-rendering-pixelated[Vote here!]
