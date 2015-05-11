@@ -49,7 +49,7 @@ image::pixelart.gif[Mario with preserved pixels,160]
 
 === What does the spec say?
 
-Have you noticed that each browser engine uses a completely different keyword value (`nearest-neighbor`, `crisp-edges`, `optimize-contrast`, and `pixelated`) for this functionality? The link:http://dev.w3.org/csswg/css-images-3/#the-image-rendering[CSS Image Values spec] has recently been updated to consolidate this mess by standardizing `image-rendering: pixelated`. (There is also a `crisp-edges` value, but as the example in the spec demonstrates, this value does not neccessarily perserve the original look of pixel art.)
+Have you noticed that each browser engine uses a completely different keyword value (`nearest-neighbor`, `crisp-edges`, `optimize-contrast`, and `pixelated`) for this functionality? The link:http://dev.w3.org/csswg/css-images-3/#the-image-rendering[CSS Image Values spec] has recently been updated to consolidate this mess by standardizing `image-rendering: pixelated`. (There is also a `crisp-edges` value, but as the example in the spec demonstrates, this value does not necessarily preserve the original look of pixel art.)
 
 === What about Edge?
 
