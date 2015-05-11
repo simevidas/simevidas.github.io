@@ -2,23 +2,21 @@
 
 :hp-tags: CSS
 
-
-
 If we take an image representing pixel art, for instance, this 16×32 pixel Mario GIF:
 
 image::pixelart.gif[Mario]
 
-and blow it up (e.g. by setting `width: 160px` on the image in CSS), browsers will by default **not** preserve its pixels:
+and blow it up (e.g. by setting `width: 160px` on the image in CSS), the browsers’ default scaling algorithm (bilinear interpolation, I think) will **not** preserve the image’s pixels:
 
 image::pixelart.gif[Mario, 160]
 
-In order to preserve pixels (in a cross-browser fashion), we need to set these **four CSS styles** on the image:
+In order to retain the pixelated look, in a cross-browser fashion, we need to set these **four CSS declarations** on the image:
 
 [source,css]
 ----
 .u-preserve-pixels {
   
-  /* IE and Edge */
+  /* IE */
   -ms-interpolation-mode: nearest-neighbor;
   
   /* Firefox */
@@ -48,3 +46,11 @@ image::pixelart.gif[Mario with preserved pixels,160]
 }
 </style>
 ++++++++++++++
+
+=== What does the spec say?
+
+Have you noticed that each browser engine uses a completely different keyword value (`nearest-neighbor`, `crisp-edges`, `optimize-contrast`, and `pixelated`) for this functionality? The link:http://dev.w3.org/csswg/css-images-3/#the-image-rendering[CSS Image Values spec] has recently been updated to consolidate this mess by standardizing `image-rendering: pixelated`. (There is also a `crisp-edges` value, but as the example in the spec demonstrates, this value does not neccessarily perserve the original look of pixel art.)
+
+=== What about Edge?
+
+As you may have heard, Microsoft’s Edge browser/engine has started removing legacy `-ms-` prefixes and it looks like `-ms-interpolation-mode: nearest-neighbor` has stopped working. I’ve tested with the unprefixed and standardized versions, and those don’t work either. I will update this post, once I find out if Microsoft plans to provide this functionality in Edge.
