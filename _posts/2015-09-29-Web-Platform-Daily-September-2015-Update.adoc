@@ -1,0 +1,26 @@
+= Web Platform Daily September 2015 Update
+
+:hp-tags: WPD
+
+As some of you may have noticed, the WPD has been continuosly running since the beginning of the year. I’ve skipped Summer vacation this year, in order to afford a strategic 2-week break, starting Monday, Septermber 28th. I will use this time to implement site features.
+
+=== A new subscriber feature
+
+foo
+will be posting online by the end of the week, will ask for feedback
+
+=== Increasing readership
+
+bar
+
+=== “Best of 2015” releases have been posted
+
+baz
+
+image::https://raw.githubusercontent.com/simevidas/simevidas.github.io/master/images/bestof.jpg[A screenshot of two “Best of 2014” releases side-by-side]
+
+=== “W3 Viewer”
+
+lorem
+
+image::specs.jpg[A screenshot of “W3 Viewer”]
