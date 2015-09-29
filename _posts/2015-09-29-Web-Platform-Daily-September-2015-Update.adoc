@@ -2,7 +2,7 @@
 
 :hp-tags: WPD
 
-As some of you may have noticed, WPD has been continuously running since the beginning of the year. I’ve skipped my vacation this year, in order to afford a strategic 2-week break (starting Monday, September 28th) during which I’ll be working on important site features, including…
+As some of you may have noticed, WPD has been continuously running since the beginning of the year. I’ve skipped my vacation this year, to be able to afford a strategic 2-week break (starting Monday, September 28th) during which I’ll be working on important site features, including…
 
 === …a new subscriber feature
 
