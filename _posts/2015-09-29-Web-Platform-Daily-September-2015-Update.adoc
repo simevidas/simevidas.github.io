@@ -17,7 +17,7 @@ image::https://raw.githubusercontent.com/simevidas/simevidas.github.io/master/im
 
 === “W3 Viewer”
 
-This is something I’ve been working on in 2013. You can access it link:http://www.simevidas.com/specs/[here]. I’ve “resurrected” it, because of its similarity with the new feature for WPD that I’m working on.
+This is something I’ve been working on in 2013. You can access it link:http://www.simevidas.com/specs/[here]. I’ve “resurrected” it, because of its similarity to the upcoming subscriber feature I’m working on.
 
 image::specs.jpg[A screenshot of “W3 Viewer”]
 
