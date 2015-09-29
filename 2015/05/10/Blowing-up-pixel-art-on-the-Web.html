@@ -20,15 +20,15 @@
     <meta property="og:site_name" content="Šime Vidas" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Blowing up pixel art on the Web" />
-    <meta property="og:description" content="If we take an image representing pixel art, for instance, this 16 by 32 Mario GIF: and blow it up (e.g. by setting width: 160px on the image in CSS), browsers will by default not preserve its pixels: In..." />
+    <meta property="og:description" content="If we take an image representing pixel art, for instance this 16×32 pixel Mario GIF: and blow it up (e.g. by setting width: 160px on the image in CSS), the browsers’ default scaling algorithm (bilinear interpolation, I think)..." />
     <meta property="og:url" content="http://www.simevidas.com/2015/05/10/Blowing-up-pixel-art-on-the-Web.html" />
     <meta property="article:published_time" content="2015-05-09T22:00:00.000Z" />
-    <meta property="article:modified_time" content="2015-05-09T23:08:00.977Z" />
+    <meta property="article:modified_time" content="2015-05-11T23:52:07.872Z" />
     <meta property="article:tag" content="CSS" />
     
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Blowing up pixel art on the Web" />
-    <meta name="twitter:description" content="If we take an image representing pixel art, for instance, this 16 by 32 Mario GIF: and blow it up (e.g. by setting width: 160px on the image in CSS), browsers will by default not preserve its pixels: In..." />
+    <meta name="twitter:description" content="If we take an image representing pixel art, for instance this 16×32 pixel Mario GIF: and blow it up (e.g. by setting width: 160px on the image in CSS), the browsers’ default scaling algorithm (bilinear interpolation, I think)..." />
     <meta name="twitter:url" content="http://www.simevidas.com/2015/05/10/Blowing-up-pixel-art-on-the-Web.html" />
     
     <script type="application/ld+json">
@@ -46,9 +46,9 @@
     "headline": "Blowing up pixel art on the Web",
     "url": "http://www.simevidas.com/2015/05/10/Blowing-up-pixel-art-on-the-Web.html",
     "datePublished": "2015-05-09T22:00:00.000Z",
-    "dateModified": "2015-05-09T23:08:00.977Z",
+    "dateModified": "2015-05-11T23:52:07.872Z",
     "keywords": "CSS",
-    "description": "If we take an image representing pixel art, for instance, this 16 by 32 Mario GIF: and blow it up (e.g. by setting width: 160px on the image in CSS), browsers will by default not preserve its pixels: In..."
+    "description": "If we take an image representing pixel art, for instance this 16×32 pixel Mario GIF: and blow it up (e.g. by setting width: 160px on the image in CSS), the browsers’ default scaling algorithm (bilinear interpolation, I think)..."
 }
     </script>
 
@@ -80,8 +80,10 @@
         </header>
 
         <section class="post-content">
-            <div class="paragraph">
-<p>If we take an image representing pixel art, for instance, this 16 by 32 Mario GIF:</p>
+            <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>If we take an image representing pixel art, for instance this 16×32 pixel Mario GIF:</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -89,7 +91,7 @@
 </div>
 </div>
 <div class="paragraph">
-<p>and blow it up (e.g. by setting <code>width: 160px</code> on the image in CSS), browsers will by default <strong>not</strong> preserve its pixels:</p>
+<p>and blow it up (e.g. by setting <code>width: 160px</code> on the image in CSS), the browsers’ default scaling algorithm (bilinear interpolation, I think) will <strong>not</strong> preserve the image’s pixels:</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -97,7 +99,7 @@
 </div>
 </div>
 <div class="paragraph">
-<p>In order to preserve pixels (in a cross-browser fashion), we need to set these <strong>5 CSS properties</strong> on the image:</p>
+<p>In order to retain the pixelated look, in a cross-browser fashion, we need to set these <strong>four CSS declarations</strong> on the image:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -109,13 +111,10 @@
   /* Firefox */
   image-rendering: -moz-crisp-edges;
 
-  /* Opera Presto (12.x) */
-  image-rendering: -o-crisp-edges;
-
   /* Safari */
   image-rendering: -webkit-optimize-contrast;
 
-  /* Chrome/Opera */
+  /* Chrome and Opera */
   image-rendering: pixelated;
 
 }</code></pre>
@@ -138,6 +137,20 @@
   image-rendering: pixelated;
 }
 </style>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_what_does_the_spec_say">What does the spec say?</h3>
+<div class="paragraph">
+<p>Have you noticed that each browser engine uses a completely different keyword value (<code>nearest-neighbor</code>, <code>crisp-edges</code>, <code>optimize-contrast</code>, and <code>pixelated</code>) for this functionality? The <a href="http://dev.w3.org/csswg/css-images-3/#the-image-rendering">CSS Image Values spec</a> has recently been updated to consolidate this mess by standardizing <code>image-rendering: pixelated</code>. (There is also a <code>crisp-edges</code> value, but as the example in the spec demonstrates, this value does not necessarily preserve the original look of pixel art.)</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_what_about_edge">What about Edge?</h3>
+<div class="paragraph">
+<p>As you may have heard, Microsoft’s Edge browser/engine has started removing legacy <code>-ms-</code> prefixes and it looks like <code>-ms-interpolation-mode: nearest-neighbor</code> has stopped working. I have suggested <code>image-rendering: pixelated</code> for Edge on Microsoft’s feedback forum (UserVoice). <a href="https://wpdev.uservoice.com/forums/257854-microsoft-edge-developer/suggestions/7902426-image-rendering-pixelated">Vote here!</a></p>
+</div>
+</div>
         </section>
 
         <footer class="post-footer">
@@ -226,7 +239,7 @@
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    ga('create', '&lt;script&gt;(function(i,s,o,g,r,a,m){i[&#x27;GoogleAnalyticsObject&#x27;]=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,&#x27;script&#x27;,&#x27;//www.google-analytics.com/analytics.js&#x27;,&#x27;ga&#x27;);ga(&#x27;create&#x27;, &#x27;UA-7817762-8&#x27;, &#x27;auto&#x27;);ga(&#x27;send&#x27;, &#x27;pageview&#x27;);&lt;/script&gt;', 'auto');
+    ga('create', 'UA-7817762-8', 'auto');
     ga('send', 'pageview');
 
     </script>
