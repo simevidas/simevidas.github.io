@@ -6,7 +6,7 @@ As some of you may have noticed, WPD has been continuosly running since the begi
 
 === A new subscriber feature
 
-I plan to implement curated pages for certain features and topics (like “Pointer Events”, “Client Hints”, “Rendering performance”, etc.). These would bring together select entries from the all releases that have been published on WPD so far.
+I plan to implement curated pages for certain features and topics (like “Pointer Events”, “Client Hints”, “Rendering performance”, etc.). These will bring together select entries from the releases that have been published on WPD so far.
 
 
 === “Best of 2014” releases have been posted
