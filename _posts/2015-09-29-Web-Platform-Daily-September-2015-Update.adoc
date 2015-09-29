@@ -23,5 +23,5 @@ image::specs.jpg[A screenshot of “W3 Viewer”]
 
 === What’s next for Web Platform Daily
 
-The most important goal for me in the immediate future will be to increase readership, significantly. I’ll try advertising the website and look at other ways to introduce more people to the service. 
+My most important goal for the immediate future is to increase readership, significantly. I’ll give advertising a shot and look at other ways to introduce more people to the website. More on that, soon.
 
