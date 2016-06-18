@@ -6,12 +6,16 @@ This post explains what the new crossed-out lock icons on link:https://webplatfo
 
 image::screenshot.png[Alt text]
 
-=== Why?
+=== What
+
+I’ve recently started to label external links that don’t support HTTPS, in releases on WPD.
+
+=== Why
 
 Indication for user that external resource is over non-secure HTTP
 Also helps me detect such resources when creating releases.
 
-=== How?
+=== How
 
 Simple:
 
