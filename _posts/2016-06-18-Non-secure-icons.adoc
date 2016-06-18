@@ -13,12 +13,17 @@ Also helps me detect such resources when creating releases.
 
 === How?
 
-... with code block
+Simple:
+
+[source,css]
+----
+/* paste CSS code here */
+----
 
 === Credit
 
 Mention story with Mathias
 
-=== HTTPS on Web Platform Daily
+=== Btw
 
-Just as a quick side note, I’d like to address that Web Platform Daily uses CloudFlare’s free HTTPS and that the part of the connection between CloudFlare and my origin server...
+HTTPS on Web Platform Daily; Just as a quick side note, I’d like to address that Web Platform Daily uses CloudFlare’s free HTTPS and that the part of the connection between CloudFlare and my origin server...
