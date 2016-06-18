@@ -2,7 +2,7 @@
 
 :hp-tags: Web Platform Daily
 
-This post explains what the new crossed-out lock icons on Web Platform Daily are all about.
+This post explains what the new crossed-out lock icons on link:https://webplatformdaily.org[Web Platform Daily] are all about.
 
 image::screenshot.png[Alt text]
 
@@ -26,4 +26,4 @@ Mention story with Mathias
 
 === Btw
 
-HTTPS on Web Platform Daily; Just as a quick side note, I’d like to address that Web Platform Daily uses CloudFlare’s free HTTPS and that the part of the connection between CloudFlare and my origin server...
+As a side note, in case you’re wondering “how HTTPS is Web Platform Daily”, it uses CloudFlare’s free HTTPS and the part of the connection between CloudFlare and my origin server...
