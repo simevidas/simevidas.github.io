@@ -1,0 +1,24 @@
+= “Non-secure” icons
+
+:hp-tags: Web Platform Daily
+
+This post explains what the new crossed-out lock icons on Web Platform Daily are all about.
+
+image::screenshot.png[Alt text]
+
+=== Why?
+
+Indication for user that external resource is over non-secure HTTP
+Also helps me detect such resources when creating releases.
+
+=== How?
+
+... with code block
+
+=== Credit
+
+Mention story with Mathias
+
+=== HTTPS on Web Platform Daily
+
+Just as a quick side note, I’d like to address that Web Platform Daily uses CloudFlare’s free HTTPS and that the part of the connection between CloudFlare and my origin server...
