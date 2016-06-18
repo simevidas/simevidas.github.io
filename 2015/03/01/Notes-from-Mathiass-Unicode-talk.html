@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Notes from Mathias’s Unicode talk</title>
+    <meta name="description" content="" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="//www.simevidas.com/themes/Casper/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="//www.simevidas.com/themes/Casper/assets/css/screen.css?v=1.0.0" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+
+    <link rel="canonical" href="http://www.simevidas.com/2015/03/01/Notes-from-Mathiass-Unicode-talk.html" />
+    
+    <meta property="og:site_name" content="Šime Vidas" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Notes from Mathias’s Unicode talk" />
+    <meta property="og:description" content="Here are my notes: The possible code point values range from U+000000 to U+10FFFF (these are hex numbers). Some code points don’t have symbols but are reserved for future use. The first plane, BMP, ranges from U+..." />
+    <meta property="og:url" content="http://www.simevidas.com/2015/03/01/Notes-from-Mathiass-Unicode-talk.html" />
+    <meta property="article:published_time" content="2015-02-28T23:00:00.000Z" />
+    <meta property="article:modified_time" content="2016-06-18T17:35:27.650Z" />
+    <meta property="article:tag" content="JavaScript" />
+    <meta property="article:tag" content="Unicode" />
+    <meta property="article:tag" content="strings" />
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Notes from Mathias’s Unicode talk" />
+    <meta name="twitter:description" content="Here are my notes: The possible code point values range from U+000000 to U+10FFFF (these are hex numbers). Some code points don’t have symbols but are reserved for future use. The first plane, BMP, ranges from U+..." />
+    <meta name="twitter:url" content="http://www.simevidas.com/2015/03/01/Notes-from-Mathiass-Unicode-talk.html" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "Šime Vidas",
+    "author": {
+        "@type": "Person",
+        "name": "Šime Vidas",
+        "image": "https://avatars.githubusercontent.com/u/716405?v=3",
+        "url": "undefined/author/undefined",
+        "sameAs": "http://webplatformdaily.org"
+    },
+    "headline": "Notes from Mathias’s Unicode talk",
+    "url": "http://www.simevidas.com/2015/03/01/Notes-from-Mathiass-Unicode-talk.html",
+    "datePublished": "2015-02-28T23:00:00.000Z",
+    "dateModified": "2016-06-18T17:35:27.650Z",
+    "keywords": "JavaScript,  Unicode,  strings",
+    "description": "Here are my notes: The possible code point values range from U+000000 to U+10FFFF (these are hex numbers). Some code points don’t have symbols but are reserved for future use. The first plane, BMP, ranges from U+..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost ?" />
+    <link rel="alternate" type="application/rss+xml" title="Šime Vidas" href="http://www.simevidas.com/rss" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+</head>
+<body class="post-template tag-Java-Script tag-Unicode tag-strings">
+
+    
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        <a class="back-button icon-arrow-left" href="http://www.simevidas.com">Home</a>
+        <!-- <a class="subscribe-button icon-feed" href="http://www.simevidas.com/rss/">Subscribe</a> -->
+    </nav>
+</header>
+
+<main class="content" role="main">
+
+    <article class="post tag-Java-Script tag-Unicode tag-strings">
+
+        <header class="post-header">
+            <h1 class="post-title">Notes from Mathias’s Unicode talk</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2015-03-01">01 March 2015</time>  on <a href="http://www.simevidas.com/tag/Java-Script">JavaScript</a>, <a href="http://www.simevidas.com/tag/Unicode"> Unicode</a>, <a href="http://www.simevidas.com/tag/strings"> strings</a>
+            </section>
+        </header>
+
+        <section class="post-content">
+            <div class="paragraph">
+<p>Here are my notes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The possible code point values range from <code>U+000000</code> to <code>U+10FFFF</code> (these are hex numbers). Some code points don’t have symbols but are reserved for future use.</p>
+</li>
+<li>
+<p>The first plane, BMP, ranges from <code>U+000</code> to <code>U+FFFF</code> (~65k symbols). All other code points (<code>U+010000</code> and up) are called “astral code points”.</p>
+</li>
+<li>
+<p>JavaScript’s hexadecimal escape sequence, <code>\x</code>, is limited to 2 hex digits, so it cannot be used for code points above <code>U+00FF</code>. The Unicode escape sequence, <code>\u</code>, allows 4 hex digits, so it can escape any symbol in BMP.</p>
+<div class="literalblock">
+<div class="content">
+<pre>'\x41' === 'A'
+'\u03B2' === 'β'</pre>
+</div>
+</div>
+</li>
+<li>
+<p>The ECMAScript 6 Unicode code point escape sequence, <code>\u{}</code>, allows up to 6 hex digits (inserted between the braces), so it can represent any Unicode code point. For compatibility with existing ES5 engines, <code>\u</code> surrogate pairs have to be used instead.</p>
+<div class="literalblock">
+<div class="content">
+<pre>'\u{1F601}' === '💩'       // ES6
+'\uD83D\uDCA9' === '💩'    // surrogate pairs for ES5 engines</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+        </section>
+
+        <footer class="post-footer">
+
+
+            <figure class="author-image">
+                <a class="img" href="" style="background-image: url(https://avatars.githubusercontent.com/u/716405?v=3)"><span class="hidden">Šime Vidas's Picture</span></a>
+            </figure>
+
+            <section class="author">
+                <h4><a href="">Šime Vidas</a></h4>
+
+                    <p>Read <a href="">more posts</a> by this author.</p>
+                <div class="author-meta">
+                    <span class="author-location icon-location">Zagreb, Croatia</span>
+                    <span class="author-link icon-link"><a href="http://webplatformdaily.org">http://webplatformdaily.org</a></span>
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/share?text=Notes%20from%20Mathias%E2%80%99s%20Unicode%20talk&amp;url=http://www.simevidas.com/2015/03/01/Notes-from-Mathiass-Unicode-talk.html"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://www.simevidas.com/2015/03/01/Notes-from-Mathiass-Unicode-talk.html"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http://www.simevidas.com/2015/03/01/Notes-from-Mathiass-Unicode-talk.html"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+        </footer>
+
+
+        <section class="post-comments">
+          <div id="disqus_thread"></div>
+          <script type="text/javascript">
+          var disqus_shortname = 'simevidas'; // required: replace example with your forum shortname
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </section>
+
+
+    </article>
+
+</main>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="http://www.simevidas.com">Šime Vidas</a> &copy; 2016</section>
+        <section class="poweredby">Proudly published with <a href="http://hubpress.io">HubPress</a></section>
+    </footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js?v="></script> 
+      <script type="text/javascript">
+        jQuery( document ).ready(function() {
+          // change date with ago
+          jQuery('ago.ago').each(function(){
+            var element = jQuery(this).parent();
+            element.html( moment(element.text()).fromNow());
+          });
+        });
+
+        hljs.initHighlightingOnLoad();      
+      </script>
+
+    <script type="text/javascript" src="//www.simevidas.com/themes/Casper/assets/js/jquery.fitvids.js?v=1.0.0"></script>
+    <script type="text/javascript" src="//www.simevidas.com/themes/Casper/assets/js/index.js?v=1.0.0"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-7817762-8', 'auto');
+    ga('send', 'pageview');
+
+    </script>
+</body>
+</html>
