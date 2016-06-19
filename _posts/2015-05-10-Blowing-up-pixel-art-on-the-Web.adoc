@@ -2,10 +2,6 @@
 
 :hp-tags: CSS
 
-include::https://raw.githubusercontent.com/simevidas/simevidas.github.io/master/_includes/diary.adoc[The diary]
-
-'''
-
 If we take an image representing pixel art, for instance this 16×32 pixel Mario GIF:
 
 image::pixelart.gif[Mario]
