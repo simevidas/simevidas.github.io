@@ -11,7 +11,7 @@ include::https://raw.githubusercontent.com/simevidas/simevidas.github.io/master/
 
 '''
 
-gist::simevidas/90deea646a1ed946150879ac60034da1[]
+gist::90deea646a1ed946150879ac60034da1[]
 
 '''
 
