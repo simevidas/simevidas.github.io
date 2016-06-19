@@ -6,22 +6,22 @@
 
 '''
 
-include::_includes/diary.adoc[The diary]
+include::https://raw.githubusercontent.com/simevidas/simevidas.github.io/master/_includes/diary.adoc[The diary]
 
 
 '''
 
-include::/_includes/diary.adoc[The diary]
+include::http://raw.githubusercontent.com/simevidas/simevidas.github.io/master/_includes/diary.adoc[The diary]
 
 
 '''
 
-include::./_includes/diary.adoc[The diary]
+include::https://rawgit.com/simevidas/simevidas.github.io/master/_includes/diary.adoc[The diary]
 
 
 '''
 
-include::../_includes/diary.adoc[The diary]
+include::http://rawgit.com/simevidas/simevidas.github.io/master/_includes/diary.adoc[The diary]
 
 
 '''
