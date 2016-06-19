@@ -1,0 +1,33 @@
+= “Non-secure” icons
+
+:hp-tags: Web Platform Daily
+
+This post explains what the new crossed-out lock icons on link:https://webplatformdaily.org[Web Platform Daily] are all about.
+
+image::screenshot.png[Alt text]
+
+=== What
+
+I’ve recently started to label external links that don’t support HTTPS, in releases on WPD.
+
+=== Why
+
+Indication for user that external resource is over non-secure HTTP
+Also helps me detect such resources when creating releases.
+
+=== How
+
+Simple:
+
+[source,css]
+----
+/* paste CSS code here */
+----
+
+=== Credit
+
+Mention story with Mathias
+
+=== Btw
+
+As a side note, in case you’re wondering “how HTTPS is Web Platform Daily”, it uses CloudFlare’s free HTTPS and the part of the connection between CloudFlare and my origin server...
