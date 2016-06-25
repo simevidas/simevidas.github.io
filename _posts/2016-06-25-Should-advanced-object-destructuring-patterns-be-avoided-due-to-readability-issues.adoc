@@ -1,0 +1,33 @@
+= Should advanced object destructuring patterns be avoided due to readability issues?
+
+:hp-tags: JavaScript
+
+Wes Bos recently tweeted an advanced object destructuring pattern, involving variable renaming and default values. From the ensuing discussion, it become apparent that some developers may want to avoid such a pattern due to low readability. I don’t share this view, so I’m writing this post to entice further discussion.
+
+(insert tweet here) (figure with figcaption)
+
+== Basic destructuing is ok
+
+foo
+
+== Let’s rename a variable
+
+bar
+
+== Let’s default to a value
+
+baz
+
+== Now all together
+
+lorem
+
+== Abort operation
+
+If the advanced pattern is to be avoided, what’t the fallback strategy? Do we go back to something like this?
+
+(code block)
+
+It doesn’t seem logical use destructuring in its basic form, but then avoid it as soon the syntax becomes more advanced. My interpretation of the situation is that people are stumped by the weirdness of its advanced syntax, so they’re acting defensively. 
+
+I haven’t started writing in ES6 yet, so my views may not be very relevant; it would be great if someone with experience in ES6 could share their view on this issue.
