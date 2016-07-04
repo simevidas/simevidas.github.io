@@ -13,13 +13,13 @@ I plan to start releasing curated pages for certain features and topics (like �
 
 The ten “Best of 2014” special releases are now available on WPD: link:http://webplatformdaily.org/releases/2014-12-29[2014-12-29] to link:http://webplatformdaily.org/releases/2015-01-09[2015-01-09]. These are by far the best releases published on WPD to date (for obvious reasons `\^_^`). 
 
-image::bestof.jpg[A screenshot of two “Best of 2014” releases side-by-side]
+image::https://simevidas.com/images/bestof.jpg[A screenshot of two “Best of 2014” releases side-by-side]
 
 === “W3 Viewer”
 
 This is something I’ve been working on in 2013. You can access it link:http://www.simevidas.com/specs/[here]. I’ve “resurrected” it, because of its similarity to the upcoming subscriber feature I’m working on.
 
-image::specs.jpg[A screenshot of “W3 Viewer”]
+image::https://simevidas.com/images/specs.jpg[A screenshot of “W3 Viewer”]
 
 === What’s next for Web Platform Daily
 

@@ -4,11 +4,11 @@
 
 If we take an image representing pixel art, for instance this 16×32 pixel Mario GIF:
 
-image::pixelart.gif[Mario]
+image::https://simevidas.com/images/pixelart.gif[Mario]
 
 and blow it up (e.g. by setting `width: 160px` on the image in CSS), the browsers’ default scaling algorithm (bilinear interpolation, I think) will **not** preserve the image’s pixels:
 
-image::pixelart.gif[Mario, 160]
+image::https://simevidas.com/images/pixelart.gif[Mario, 160]
 
 In order to retain the pixelated look, in a cross-browser fashion, we need to set these **four CSS declarations** on the image:
 
@@ -33,7 +33,7 @@ In order to retain the pixelated look, in a cross-browser fashion, we need to se
 
 The result:
 
-image::pixelart.gif[Mario with preserved pixels,160]
+image::https://simevidas.com/images/pixelart.gif[Mario with preserved pixels,160]
 
 ++++++++++++++
 <style>
