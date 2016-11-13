@@ -1,5 +1,0 @@
-= The first post
-
-:hp-tags: other
-
-I have chosen the **HubPress** platform for my blog. This is a test post.
